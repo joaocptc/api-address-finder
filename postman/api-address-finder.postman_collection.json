@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "602300e4-1a66-4380-828c-b0ab3c634900",
+		"name": "api-address-finder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find-address-by-cep",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/address-finder/08121710",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"address-finder",
+						"08121710"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
