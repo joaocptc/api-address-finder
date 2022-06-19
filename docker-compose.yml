@@ -1,0 +1,35 @@
+version: '3.3'
+
+networks:
+  lh-network:
+    driver: bridge
+
+volumes:
+  prometheus_data:
+  grafana_data:
+  redis_data:
+
+services:
+  prometheus:
+    image: bitnami/prometheus:latest
+    volumes:
+      - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - lh-network
+    ports:
+      - 9090:9090
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - 3000:3000
+    networks:
+      - lh-network
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+
+
+

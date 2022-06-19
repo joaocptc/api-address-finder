@@ -1,0 +1,26 @@
+server:
+  port: 8085
+
+api:
+  uri: https://viacep.com.br/ws/{cep}/json
+
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: "health,prometheus"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    prometheus:
+      enabled: true
+
+spring:
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+    time-to-live: 86400000
