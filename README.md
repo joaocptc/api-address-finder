@@ -25,3 +25,6 @@ Requisições para a API devem seguir os padrões:
 |---|---|
 | `GET` | Retorna o endeço referente ao cep informado. |
 
+
+.. WIP
+
